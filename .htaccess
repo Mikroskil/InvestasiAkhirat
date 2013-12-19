@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^berita([0-9]+)-(.*)\.html$ berita_detail.php?id=$1
+
+Options All -Indexes
+</IfModule>
