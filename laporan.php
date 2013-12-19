@@ -27,6 +27,7 @@ include 'connect.php';
         
         <div class="kanan">
         	<h3 class="judul">Testimonial</h3>
+            <p>ggggggg</p>
         </div>
         
 	</div><!--End Container-->
