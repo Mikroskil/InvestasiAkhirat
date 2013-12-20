@@ -22,7 +22,7 @@ include 'connect.php';
         	<div class="header_title">Daftar Donasi..</div>
 			<table width="100%">
             	<tr>
-                	<td width="10px">Nama</td>
+                	<td width="10px">Nama donasi</td>
                     <td width="10px">Alamat</td>
                     <td width="10px">Jlh. Donasi</td>
                 </tr>
