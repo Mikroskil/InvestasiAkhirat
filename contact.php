@@ -25,7 +25,7 @@ include 'connect.php';
         <div class="pcontainer">
         	<h3 style="color:#06F;">Kontak</h3>
             <hr />
-        	<p>Nurhadi</p>
+        	<p>Nurhadi pranata</p>
             <p>Jln.Sutrisno</p>
         </div>
 	</div><!--End Container-->
