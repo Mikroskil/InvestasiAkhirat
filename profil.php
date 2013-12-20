@@ -19,7 +19,7 @@ include 'connect.php';
 	<!--Start Container for the web content-->
 	<div class="content">
 		<div class="kiri">
-        	<h3>Profil</h3>
+        	<h2>Profil</h2>
             <hr style="color:#3333FF" />
             <?php
             $sql = mysql_query("SELECT * from profil ");
