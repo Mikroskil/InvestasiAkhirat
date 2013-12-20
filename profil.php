@@ -7,7 +7,9 @@ include 'connect.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $judul;?> | Profil</title>
+<link rel="shortcut icon" href="image/ia.png" />
 <link rel="stylesheet"  type="text/css" href="CSS/index2.css"/>
+
 </head>
 
 <body>
@@ -15,11 +17,10 @@ include 'connect.php';
 <!--Start Menu-->
 <?php include 'menu.php';?>
 <!--End Menu-->
-<div class="header_under"></div>
 	<!--Start Container for the web content-->
 	<div class="content">
 		<div class="kiri">
-        	<h2>Profil</h2>
+        	<h3>Profil</h2>
             <hr style="color:#3333FF" />
             <?php
             $sql = mysql_query("SELECT * from profil ");
@@ -28,9 +29,7 @@ include 'connect.php';
             <p><?php echo $isi['isi'];?></p>
         </div>
         
-        <div class="kanan">
-        	<h3 class="judul">Testimonial</h3>
-        </div>
+<?php include 'kanan.php';?>
         
 	</div><!--End Container-->
 <?php include 'footer.php';?>
