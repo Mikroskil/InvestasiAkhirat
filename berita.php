@@ -7,6 +7,7 @@ include 'connect.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $judul;?> | Berita</title>
+<link rel="shortcut icon" href="image/ia.png" />
 <link rel="stylesheet"  type="text/css" href="CSS/index2.css"/>
 </head>
 
@@ -15,10 +16,11 @@ include 'connect.php';
 <!--Start Menu-->
 <?php include 'menu.php';?>
 <!--End Menu-->
-<div class="header_under"></div>
-	<!--Start Container for the web content-->
+
+<!--Start Container for the web content-->
 	<div class="content">
 		<div class="kiri">
+
         	
             
      		<div class="content_holder"><!--Start content holder for the album-->
@@ -52,7 +54,7 @@ include 'connect.php';
 		   <hr color=#CCC noshade=noshade />
 		   <div class="batas"></div>';
  }
- //Langkah 3: Hitung total data dan halaman 
+  //Langkah 3: Hitung total data dan halaman 
 	  $tampil2 = mysql_query("SELECT * FROM berita");
 	  $jmldata = mysql_num_rows($tampil2);
 	  $jmlhal  = ceil($jmldata/$batas);
@@ -93,9 +95,7 @@ include 'connect.php';
             
         </div>
         
-        <div class="kanan">
-        	<h3 class="judul">Testimonial</h3>
-        </div>
+        <?php include 'kanan.php';?>
         
 	</div><!--End Container-->
 <?php include 'footer.php';?>
