@@ -52,7 +52,7 @@ header("location:./loginpage.php");
     <!--End Sidebar-->
     <!--Start Web Content-->
     <div class="home_content">
-    	<h2 class="header">Assalamu'alaikum Admin Investasi Akhirat<?php echo $_SESSION['name']?></h2>
+    	<h2 class="header">Hello Admin <?php echo $_SESSION['name']?></h2>
         Selamat datang di halaman Admin <?php echo $judul;?>
         <div class="banner">
         
