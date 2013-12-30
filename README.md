@@ -1,0 +1,4 @@
+InvestasiAkhirat
+================
+
+Investasi Akhirat
