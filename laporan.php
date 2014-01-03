@@ -44,7 +44,7 @@ include 'connect.php';
 	                  } ?>
 	            
 			
-            <p>Jumlah yang mendonasi sebanyak : <b><?php echo $jmldata;?></b> Orang</p>
+            <p>Jumlah yang donasi sebanyak : <b><?php echo $jmldata;?></b> Orang</p>
             <p>Jumlah Dana yang terkumpul sebanyak : <?php echo $jumlah;?> </p>
         </div>
         

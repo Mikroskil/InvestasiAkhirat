@@ -25,7 +25,7 @@ header("location:./loginpage.php");
 				?>
             <ul>
             	
-                <li><a href="logout.php">Admin Logout</a></li>
+                <li><a href="logout.php">Admin Log out</a></li>
             </ul>
    	</div>
 </div>
@@ -38,7 +38,7 @@ header("location:./loginpage.php");
 	<!--Sidebar-->
     <div class="sidebar_menu">
     	<div>
-    		<h4 class="header"> Menu</h4>
+    		<h2 class="header"> Menu</h2>
         </div>
     	<ul>
         	<li><a href="berita.php"><img src="../Templates/list-style.png" height="8"  width="8"/>&nbsp;Berita</a></li>
@@ -52,11 +52,12 @@ header("location:./loginpage.php");
     <!--End Sidebar-->
     <!--Start Web Content-->
     <div class="home_content">
-    	<h2 class="header">Hello Admin <?php echo $_SESSION['name']?></h2>
-        Selamat datang di halaman Admin <?php echo $judul;?>
-        <div class="banner">
+    	<h1 class="header">Assalamu'alaikum Admin <?php echo $_SESSION['name']?></h1>
         
-        </div>
+<h3> Selamat datang di halaman Admin <?php echo $judul;?></h3>
+        <h3>Awali harimu dengan ...</h3>
+        <p>
+      <div class="banner"><img src="../image/bismillah4.jpg" height="81" width="670"/></div>
     </div>
      <!--End Web Content-->
 </div>
