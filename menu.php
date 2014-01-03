@@ -10,6 +10,16 @@
 </div>
 
 <div class="header_menu">
+<div class="logo">
+    <img src="image/ia.png" class="logo-gbr" /> 
+    </div>
+    <div class="teks">
+    <p>Sebagian Hartamu adalah Hak Mereka</p>
+    </div>	
+	
+</div>
+
+<div class="header_under">
 	<div class="menu">
     	<ul>
         	<li><a href="index.php">HOME</a></li>
