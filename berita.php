@@ -6,7 +6,7 @@ include 'connect.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo $judul;?> | Berita</title>
+<title><?php echo $judul;?> | Beritaaaaaaaaaa</title>
 <link rel="shortcut icon" href="image/ia.png" />
 <link rel="stylesheet"  type="text/css" href="CSS/index2.css"/>
 </head>
