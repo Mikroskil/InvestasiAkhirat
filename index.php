@@ -6,6 +6,7 @@ include 'connect.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $judul;?></title>
+<link rel="shortcut icon" href="image/ia.png" />
 <link rel="stylesheet"  type="text/css" href="CSS/index.css" />
 <script type="text/javascript" src="Javascript/jquery-1.6.2.min.js"></script>
 <script type="text/javascript">
@@ -117,7 +118,6 @@ $(function() {
 <!--Start Menu-->
 <?php include 'menu.php';?>
 <!--End Menu-->
-<div class="header_under"></div>
 <div class="container_wrapper"><!--Start Container for the web content-->
     <div class="home_content"> <!--Start Web Content-->
         <div class="banner">
@@ -155,7 +155,7 @@ $(function() {
         	<form id="vote" name="vote" method="post"  action="vote.php">
             	<div class="header_vote"> 
                 	<div id="header_vote_title">Survey</div>
-                    <div id="message">Bagaimana menurut anda website ini??<a href="#" id="link">See Statistic here!</a></div>  
+                    <div id="message">Bagaimana menurut anda website ini??<a href="vote_stat.php" id="link">See Statistic here!</a></div>  
                     <br />
                     <?php
 					//require_once('Administrator/PHP/connect.php');
@@ -182,6 +182,7 @@ $(function() {
         </div>
     </div> <!--End Web Content-->    
 <div class="img_container"><!--Start image container-->
+<!--
 			
        <div id="class_col1">
           <img src="image/1.jpg" height="165" width="216" id="img"/>
@@ -194,11 +195,21 @@ $(function() {
    	 <div class="header">
     		<div id="header_title">Testimonial</div>
             <div class="album_holder">
-            	<div class="content_holder">
-                	<div class="content">
-                    <b>Nama</b>: <i>Isi testimonial...</i>
-                	</div>
-                </div>
+            	
+                	
+                    <?php
+                           		$select = mysql_query("select * from tblfeedback order by f_id DESC limit 0,3");
+								while($rTst=mysql_fetch_array($select))
+        	                        {	
+										echo '<div class="content_holder">';
+										echo '<div class="content">';				
+                                		echo '<font color="#0000FF"><b color="#0000FF">'.$rTst['name'].'</b></font> : <i>'.$rTst['message'].'</i> ';
+										echo '</div>';
+										echo '</div>';
+									}
+							?>
+                	
+                
             </div>
         </div>
     </div>
@@ -211,13 +222,33 @@ $(function() {
                            		$select = mysql_query("select * from berita order by id_berita DESC limit 0,10");
 								while($r=mysql_fetch_array($select))
         	                        {					
-                                		echo '<li><a href="berita_detail.php?id='."$r[id_berita]".'"> ' .$r['judul'].' </a></li>';
+									$judul = preg_replace("/\s/","-",$r['judul']);
+    								$url_link = "berita".$r['id_berita']."-".$judul.".html";
+                                		//echo '<li><a href="'.$url_link.'"> ' .$r['judul'].' </a></li>';
+										echo '<li><a href="'.$url_link.'"><h3 class="cap">' .$r['judul'].'</h3></a></p>
+          <img src="image/upload/'."$r[gambar]".'" width="50px" height="38px" alt="an image" align="left" class="foto" vspace="2px" hspace="2px"/>'.substr("$r[isi]",0,100).' <a href="'.$url_link.'" class="more">[Read More]</a>
+		   </li>';
+									}
+							?>
+                    </ul>
+            </div>
+        </div>
+     	<div class="header">
+    		<div id="news_header">Daftar Nama yang Mendonasi <a href="donasi.php" id="link" style="font:Verdana, Geneva, sans-serif; font-size:12px; float:right;">Selengkapnya</a></div> 
+                <div class="news_content">
+                    <ol type="1">
+                    		<?php
+                           		$select = mysql_query("select * from donasi order by id_donasi DESC limit 0,7");
+								while($rDonasi=mysql_fetch_array($select))
+        	                        {					
+                                		echo '<li class="donatur">' .$rDonasi['nama'].'</li>';
 									}
 							?>
                     </ul>
                 </div>
         </div>
-     
+    	
+        
     	</div>
     	<div class="col3">
     	<div class="header">
